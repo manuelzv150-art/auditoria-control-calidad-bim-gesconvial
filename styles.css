@@ -1,0 +1,13 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #111827; font-family: Arial, sans-serif; }
+.viewer { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; position: relative; }
+.slide { display: block; max-width: min(100%, 1600px); max-height: calc(100vh - 3rem); width: auto; height: auto; object-fit: contain; box-shadow: 0 20px 55px rgba(0, 0, 0, .45); }
+.toolbar { position: fixed; top: 1rem; right: 1rem; display: flex; gap: .75rem; align-items: center; background: rgba(17, 24, 39, .88); border: 1px solid rgba(255, 255, 255, .2); border-radius: .5rem; padding: .55rem .75rem; color: #fff; font-size: .9rem; }
+.toolbar a { color: #fff; text-decoration: none; font-weight: 700; }
+.toolbar a:hover { text-decoration: underline; }
+.control { position: fixed; top: 50%; transform: translateY(-50%); border: 0; border-radius: 50%; width: 3rem; height: 3rem; cursor: pointer; background: rgba(17, 24, 39, .78); color: white; font-size: 2.25rem; line-height: 1; }
+.control:hover, .control:focus-visible { background: #2563eb; outline: 2px solid white; }
+.previous { left: 1rem; }
+.next { right: 1rem; }
+@media (max-width: 640px) { .viewer { padding: .5rem; } .slide { max-height: calc(100vh - 1rem); } .control { width: 2.5rem; height: 2.5rem; } .previous { left: .35rem; } .next { right: .35rem; } .toolbar { top: .5rem; right: .5rem; font-size: .75rem; } }
